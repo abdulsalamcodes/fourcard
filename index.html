@@ -1,79 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-    <title>Frontend Mentor | Four card feature section</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div id="container">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+        <title>Frontend Mentor | Four card feature section</title>
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: hsl(0, 0%, 100%);
+                font-family: 'Poppins', sans-serif;
+                font-size: 15px;
+                color: hsl(234, 12%, 34%);
+            }
+            h1 {
+                font-weight: 600;
+                margin-top: 5px;
+            }
+            /* header */
+            .header {
+                text-align: center;
+                width: 80%;
+                margin: auto;
+            }
+            h1.header1 {
+                font-weight: 200;
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
+            .header p {
+                font-size: 0.75rem;
+                color: hsl(229, 6%, 66%);
+            }
+            .container {
+                padding: 0 30px;
+            }
+            .cards {
+                padding: 20px;
+                margin: 10px 0;
+                margin-bottom: 20px;
+                background-color: #ffffff;
+                border-radius: 2%;
+                box-shadow: 2px 10px 13px #888888;
+            }
+            .cards p {
+                color: hsl(229, 6%, 66%);
+            }
+            .img {
+                text-align: right;
+                padding: 10px 0 5px;
+            }
+            .cyancard {
+                border-top: 5px inset hsl(180, 62%, 55%);
+            }
+            .redcard {
+                border-top: 5px inset hsl(0, 78%, 62%);
+            }
+            .yellowcard {
+                border-top: 5px inset hsl(34, 97%, 64%);
+            }
+            .bluecard {
+                border-top: 5px inset hsl(212, 86%, 64%);
+            }
 
-    <header class="header">
-      <h1 class="header1">
-        Reliable, efficient delivery
-      </h1>
-      <h1>
-        Powered by Technology
-      </h1>
-      <p>
-        Our Artificial Intelligence powered tools use millions of project data points 
-        to ensure that your project is successful
-      </p>
-    </header>
+            footer {
+                margin-top: 3%;
+            }
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+            @media(min-width: 850px) {
+                .container {
+                  width: 85%;
+                  margin: 0 auto;
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-template-rows: repeat(2, 1fr);
+                  grid-gap: 2rem;
+                }
 
+                .card-1 {
+                    grid-column: 1;
+                    grid-row: 1 / 3;
+                    align-self: center;
+                    background-color: white;
+                    display: grid;
+                    grid-template-rows: 1, 1fr;
+                }
+                .card-2 {
+                    grid-column: 2;
+                    display: grid;
+                    grid-template-rows: 1, 1fr;
+                }
+                .card-3 {
+                    grid-column: 2;
+                    display: grid;
+                    grid-template-rows: 1, 1fr;
+                }
+                .card-4 {
+                  grid-column: 3;
+                  grid-row: 1 / 3;
+                  align-self: center;
+                  display: grid;
+                  grid-template-rows: 1, 1fr;
 
-    <div id="wrapper">
-      <section id="section1" class=" cards sects cyancard">
-        <h3>Supervisor</h3>
-        <p>Monitors activity to identify project roadblocks</p>
-        <div class="img">
-          <img src="images/icon-supervisor.svg" alt="">
+                }
+                .cards {
+                padding: 30px;
+                margin: 10px 0;
+                background-color: #ffffff;
+                border-radius: 2%;
+                box-shadow: 2px 10px 13px #888888;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <header class="header">
+                <h1 class="header1">
+                    Reliable, efficient delivery
+                </h1>
+                <h1>
+                    Powered by Technology
+                </h1>
+                <p>
+                    Our Artificial Intelligence powered tools use millions of project data points 
+                                                                                        to ensure that your project is successful
+                </p>
+            </header>
+
+            <div class="container">
+                    <div class="col-12 cards card-1  cyancard">
+                        <h3>Supervisor</h3>
+                        <p>Monitors activity to identify project roadblocks</p>
+                        <div class="img">
+                            <img src="images/icon-supervisor.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 cards card-2 redcard">
+                        <h3>Team Builder</h3>
+                        <p>
+                            Scans our talent network to create the optimal team for your project</p>
+                        <div class="img">
+                            <img src="images/icon-team-builder.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 cards card-3 yellowcard">
+                        <h3>
+                            Karma</h3>
+                        <p>Regularly evaluates our talent to ensure quality</p>
+                        <div class="img">
+                            <img src="images/icon-karma.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 cards card-4 bluecard">
+                        <h3>
+                            Calculator</h3>
+                        <p>Uses data from past projects to provide better delivery estimates</p>
+                        <div class="img">
+                            <img src="images/icon-calculator.svg" alt="">
+                        </div>
+                    </div>
+            </div>
+            <footer>
+                <p class="attribution">
+                    Challenge by
+                    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                                                                Coded by<a href="#">Abdulsalam</a>.
+                </p>
+            </footer>
         </div>
-      </section>
-    
-      <section id="section2" class="sects">
-        <div  class="cards2 firstCard redcard">
-          <h3>Team Builder</h3>
-          <p> Scans our talent network to create the optimal team for your project</p>
-          <div class="img">
-            <img src="images/icon-team-builder.svg" alt="">
-          </div> 
-        </div>
-        <div class="cards2 yellowcard">
-          <h3> Karma</h3>
-          <p>Regularly evaluates our talent to ensure quality</p>
-         <div class="img">
-           <img src="images/icon-karma.svg" alt="">
-         </div>
-        </div>
-      </section>
-  
-      <section id="section3" class="cards sects bluecard">
-        <h3> Calculator</h3>
-        <p>Uses data from past projects to provide better delivery estimates</p>
-        <div class="img">
-          <img src="images/icon-calculator.svg" alt="">
-        </div>
-      </section>
-  </div>
-    
-    <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Abdulsalam</a>.
-      </p>
-    </footer>
-  </div>
-</body>
+    </body>
 </html>
 
 <!-- Font awesome links and icons -->
