@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+}
+*{
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+/* For all */
+#container {
+    color: hsl(234, 12%, 34%);
+    width: 100%;
+    padding:2%  8%;
+}
+
+/* For all except header */
+#wrapper {
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+  
+}
+/* header */
+.header {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+h1.header1 {
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+h1 {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.header p {
+    font-size: 0.75rem;
+    color: hsl(229, 6%, 66%);
+}
+
+/* Cards */
+.sects {
+    flex: 1;
+    margin: 1% 15px;
+}
+.cards {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 2%;
+    box-shadow: 2px 10px 13px #888888;
+}
+.cards p {
+    color:  hsl(229, 6%, 66%);
+}
+
+.cards2 {
+    background-color: #ffffff;
+    border-radius: 2%;
+    box-shadow: 2px 10px 13px #888888;
+    padding: 20px;
+    margin: auto 0;
+}
+#section2, #section1, #section3 {
+    width: 100%;
+    margin-top: 4%;
+}
+.firstCard {
+    margin-bottom: 8%;
+}
+.cards2 p {
+    color:  hsl(229, 6%, 66%);
+}
+.img {
+    text-align: right;
+    padding: 10px 0 5px;
+}
+.cyancard{
+    border-top: 5px inset hsl(180, 62%, 55%);
+}
+.redcard{
+    border-top: 5px inset hsl(0, 78%, 62%);
+}
+.yellowcard {
+    border-top: 5px inset hsl(34, 97%, 64%);
+}
+.bluecard {
+    border-top: 5px inset hsl(212, 86%, 64%);
+}
+
+footer {
+    margin-top: 3%;
+}
+.attribution {
+     font-size: 11px; text-align: center; 
+    }
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+ }
+
+@media (max-width: 1040px){
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        align-items: baseline;
+    }
+    .cards2, .cards {
+        background-color: #ffffff;
+        border-radius: 2%;
+        box-shadow: 2px 10px 10px hsl(229, 6%, 66%);
+        padding: 10%;
+    }
+  
+    .header {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+    }
+    .firstCard {
+        margin-bottom: 5%;
+    }
+  
+}
+
+
+@media (max-width: 400px) {
+    #container {
+        color: hsl(234, 12%, 34%);
+        width: 100%;
+        padding-top: 2%;
+    }
+    .yellowcard {
+        margin-top: 15%;
+    }
+    .sects {
+        flex: 1;
+        margin: 1% 0;
+    }
+    .section3 {
+        margin-top: auto;
+    }
+    .header {
+        width: 100%;
+        font-size: smaller;
+    }
+}
